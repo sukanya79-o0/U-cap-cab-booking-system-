@@ -1,0 +1,3 @@
+POST
+
+/api/rides/book
