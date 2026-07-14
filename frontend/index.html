@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCAB - Your Ride, Your Way</title>
+  <style>
+    body {
+      background-color: #121212;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .promo-container {
+      background-color: #211c18;
+      padding: 40px;
+      text-align: center;
+      font-family: sans-serif;
+      color: #fff;
+      border-radius: 8px;
+      max-width: 900px;
+      width: 100%;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .promo-title {
+      color: #f3ad3b;
+      font-size: 3rem;
+      margin: 0 0 10px 0;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .promo-heading-two {
+      color: #f3ad3b;
+      font-size: 1.8rem;
+      margin: 20px auto;
+      max-width: 400px;
+      padding-bottom: 8px;
+      border-bottom: 3px solid #f3ad3b;
+    }
+
+    .promo-subtitle {
+      color: #a3978e;
+      font-size: 1.1rem;
+      margin: 0 0 30px 0;
+    }
+
+    .image-wrapper {
+      border: 3px solid #f3ad3b;
+      border-radius: 6px;
+      overflow: hidden;
+      display: inline-block;
+      max-width: 100%;
+      line-height: 0;
+      margin-bottom: 25px;
+    }
+
+    .promo-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .button-container {
+      margin-top: 10px;
+    }
+
+    .action-button {
+      background-color: #f3ad3b;
+      color: #000;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: background-color 0.2s ease;
+    }
+
+    .action-button:hover {
+      background-color: #dca034;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="promo-container">
+    <h1 class="promo-title">YOUR RIDE, YOUR WAY</h1>
+    <p class="promo-subtitle">Reliable. Fast. Affordable. Book premium local or casual cabs anytime, anywhere.</p>
+    
+    <div class="image-wrapper">
+      <!-- Ensure your image file is in the same folder and named ucab-screen.jpg -->
+      <img class="promo-image" src="ucab-screen.jpg" alt="UCAB Taxi Interface" />
+    </div>
+
+    <h2 class="promo-heading-two">BOOK A CAB</h2>
+
+    <!-- Input container with strict visibility styling -->
+    <div style="margin-bottom: 20px;">
+      <input type="text" 
+             placeholder="Type your destination here..." 
+             style="background-color: #ffffff !important; 
+                    color: #000000 !important; 
+                    font-size: 18px !important; 
+                    width: 80% !important; 
+                    max-width: 400px !important; 
+                    padding: 12px 15px !important; 
+                    height: auto !important; 
+                    border: 2px solid #f3ad3b !important; 
+                    border-radius: 4px !important; 
+                    display: inline-block !important; 
+                    visibility: visible !important; 
+                    opacity: 1 !important;" />
+    </div>
+
+    <div class="button-container">
+      <button class="action-button">
+        UCAB Build Active
+      </button>
+    </div>
+  </div>
+
+</body>
+</html>

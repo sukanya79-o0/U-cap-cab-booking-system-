@@ -1,0 +1,29 @@
+/* High Contrast Form Visibility Overrides */
+.form-control, .form-select, textarea.form-control {
+  background-color: #222222 !important;
+  color: #ffffff !important; 
+  border: 2px solid #555555 !important;
+}
+
+/* Explicitly target typed input values for complete visibility */
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+textarea {
+  color: #ffffff !important;
+}
+
+/* Clear readability for field placeholders */
+.form-control::placeholder, 
+textarea.form-control::placeholder {
+  color: #484641 !important;
+  opacity: 1 !important;
+}
+
+/* Highlighted focus ring when an input is selected */
+.form-control:focus, .form-select:focus {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #ffcc00 !important;
+  box-shadow: 0 0 0 4px rgba(255, 204, 0, 0.35) !important;
+}
