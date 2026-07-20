@@ -1,59 +1,64 @@
-For a U-Cab Booking System, you can use these Roles and Responsibilities in your documentation:
+const mongoose = require("mongoose");
 
-1. User
+const userSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  password: {
+    type: String,
+    required: true
+  },
+  role: {
+    type: String,
+    enum: ["user", "driver", "admin"],
+    default: "user"
+  }
+});
 
-Responsibilities:
+module.exports = mongoose.model("User", userSchema);const mongoose = require("mongoose");
 
-Register and log in.
+const userSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  password: {
+    type: String,
+    required: true
+  },
+  role: {
+    type: String,
+    enum: ["user", "driver", "admin"],
+    default: "user"
+  }
+});
 
-Book a cab by entering pickup and drop locations.
+module.exports = mongoose.model("User", userSchema);
+const express = require("express");
+const router = express.Router();
+const authorize = require("../middleware/auth");
 
-View fare estimates.
+router.get("/user", authorize("user"), (req, res) => {
+  res.send("User Dashboard");
+});
 
-Track ride status.
+router.get("/driver", authorize("driver"), (req, res) => {
+  res.send("Driver Dashboard");
+});
 
-Cancel bookings if required.
+router.get("/admin", authorize("admin"), (req, res) => {
+  res.send("Admin Dashboard");
+});
 
-View ride history.
-
-Manage profile details.
-
-
-2. Driver
-
-Responsibilities:
-
-Register and log in.
-
-Accept or reject ride requests.
-
-View assigned rides.
-
-Navigate to the pickup location.
-
-Start and complete rides.
-
-Update ride status.
-
-Manage driver profile.
-
-
-3. Admin
-
-Responsibilities:
-
-Manage user accounts.
-
-Manage driver accounts.
-
-Monitor all cab bookings.
-
-Approve or remove drivers.
-
-Manage system data.
-
-View reports and analytics.
-
-Ensure smooth system operation.
-
-
+module.exports = router;
